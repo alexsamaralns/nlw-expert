@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, ChangeEvent } from 'react'
 import logo from './assets/logo-nlw-expert.svg'
 import { Linkedin } from 'lucide-react'
 import * as Lucide from 'lucide-react'
