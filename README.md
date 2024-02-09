@@ -1,5 +1,5 @@
 
-# NLW Eexpert - Rocketseat
+# NLW Expert - Rocketseat
 
 
 Note-taking application developed during the NLW Expert week organized by Rocketseat.
