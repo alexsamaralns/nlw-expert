@@ -4,6 +4,7 @@
 
 Note-taking application developed during the NLW Expert week organized by Rocketseat.
 
+![screen](https://github.com/alexsamaralns/nlw-expert/assets/34780891/786dd595-28a9-4812-8951-8bb3d35f5255)
 
 
 
