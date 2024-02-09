@@ -4,7 +4,6 @@ import { Linkedin } from 'lucide-react'
 import * as Lucide from 'lucide-react'
 import { NoteCard } from './components/note-card'
 import { NewNoteCard } from './components/new-note-card'
-import { func } from 'prop-types'
 
 interface Note {
   id: string,
