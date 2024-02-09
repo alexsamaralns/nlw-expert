@@ -1,12 +1,28 @@
 import { useState } from 'react'
 import logo from './assets/logo-nlw-expert.svg'
+import { Linkedin } from 'lucide-react'
+import * as Lucide from 'lucide-react'
 import { NoteCard } from './components/note-card'
 import { NewNoteCard } from './components/new-note-card'
+import { func } from 'prop-types'
 
 interface Note {
   id: string,
   date: Date,
   content: string,
+}
+
+const InstagramIcon = Lucide.Instagram
+const GithubIcon = Lucide.Github
+const links: {
+  li: string
+  in: string
+  gh: string
+  [key: string]: string
+} = {
+  li: 'https://www.linkedin.com/in/alex-amaral-a45b9ab0/',
+  in: 'https://www.instagram.com/alexsamaralns1/',
+  gh: 'https://github.com/alexsamaralns',
 }
 
 export function App() {
@@ -48,13 +64,26 @@ export function App() {
     setSearch(query)
   }
 
+  function directTo(page: string) {
+    if (page) {
+      window.open(links[page], '_blank');
+    }
+  }
+
   const filteredNote = search !== ''
     ? notes.filter((note) => note.content.toLowerCase().includes(search.toLowerCase()))
     : notes
 
   return (
     <div className="mx-auto max-w-6xl my-12 space-y-6 px-5 xl:px-0">
-      <img src={logo} alt="NLW Expert" />
+      <div className="flex items-center justify-between flex-row w-full">
+        <img src={logo} alt="NLW Expert" />
+        <div className="flex items-center justify-between flex-row gap-3">
+          <Linkedin onClick={() => directTo('li')} className="text-slate-600 hover:cursor-pointer hover:text-slate-300 duration-500" />
+          <InstagramIcon onClick={() => directTo('in')} className="text-slate-600 hover:cursor-pointer hover:text-slate-300 duration-500" />
+          <GithubIcon onClick={() => directTo('gh')} className="text-slate-600 hover:cursor-pointer hover:text-slate-300 duration-500" />
+        </div>
+      </div>
       <form className="w-full">
         <input
           type="text"
